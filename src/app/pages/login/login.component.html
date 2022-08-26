@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="wrapper">
+    <div class="row hire" style="margin-top:35px;">
+        <div class="col-md-4 img-container">
+            <div class="hire-img">
+                <img src="../../../assets/images/Group 265.png">
+            </div>
+        </div>
+        <div class="col-md-6 head-align">
+            <div class="head" style="margin-bottom: 7px;">
+                <span data-color="super">Get Hired</span><span data-color="bone">&nbsp;Instantly</span><span data-color="super">!</span>
+            </div>
+            <p class="para">&nbsp;Enter your registered phone number to receive OTP.</p>
+
+            <form [formGroup]="submitForm" (ngSubmit)="onSubmit(submitForm)">
+                
+                  <!-- <mat-label>Email</mat-label>
+                  <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                         placeholder="Ex. pat@example.com">
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                  </mat-error> -->
+                    <div class="form-group submitForm" [style.border]="border ? '1px solid red':'1px solid #2A9FE1'">
+                        <input type="email" formControlName="email" formControlName="email" class="form-control" id="email" placeholder="Email*" >
+                    </div>
+
+                    <div class="form-group submitForm" [style.border]="border ? '1px solid red':'1px solid #2A9FE1'">
+                        <input type="password" formControlName="password" formControlName="password" class="form-control" id="password" placeholder="Password*">
+                    </div>
+                    <br>
+
+                    <div class="form-check checkbox" style="display: inline-block; margin-right: 275px;">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" style="left:22px;">
+                        <label class="form-check-label" for="exampleCheck1" style="padding-left:22px;">Remember Me</label>
+                    </div>
+                    <li class="forgot">
+                        <a href="#">Forgot Password ?</a>
+                    </li>
+                    <li class="member">
+                        <p>Not a Member yet?</p><a href="#" style="margin-top:-13px;margin-right: 185px;">Sign Up here</a>
+                        <button type="submit" class="btn btn-primary login-btn">Login</button>
+                    </li>
+                    <li class="login-with">
+                        <p style="color:#B8B8B8;">Or login with</p>
+                    </li>
+                    <li class="register-mobile">
+                        <img src="../../../assets/images/Combined Shape.png" style="margin-right:7px;"><a href="#" style="color:#000000;margin-right:28px;">Registered Mobile</a>
+                        <img src="../../../assets/images/logo googleg 48dp.png" style="margin-right:7px;"><a href="#" style="color:#000000">Google</a>
+                    </li>
+            </form>
+        </div>
+    </div>
+</div>
+
