@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
 
   apiData:any;
+  api:any;
   officeName:any;
   jobName:any;
   logo:any;
@@ -20,12 +21,20 @@ export class HomeComponent implements OnInit {
   max_exp:any;
   location:any;
   from:any;
+  ex=['jhh','jhjh','fhfh','djdjhdjhdjhd'];
+  length:any;
 
   constructor(private appservice:Appservice, private http:HttpClient) { }
 
   ngOnInit(): void {
     this.appservice.getSitedata().subscribe(data=>{
       this.apiData = data;
+      const resultArray = Object.keys(this.apiData).map(index => {
+        let person = this.apiData[index];
+        return person;
+      });
+      this.api = resultArray[0];
+      console.log(this.api,'ajs',this.api[0].categories[0].name,'api');
       this.jobName=this.apiData.data[0].categories[0].name;
       this.officeName=this.apiData.data[0].vendor.company_name;
       this.logo=this.apiData.data[0].vendor.logo;
@@ -37,6 +46,8 @@ export class HomeComponent implements OnInit {
       this.location=this.apiData.data[0].locations[1];
       this.from=this.apiData.data[0].salary_pay.yearly_from;
 
+      console.log(this.api,'length');
+      this.location=this.apiData.data;
       console.log(this.from,'From');
       console.log(this.location,'Location');
       console.log(this.max_exp,'max exp');
