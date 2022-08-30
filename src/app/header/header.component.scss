@@ -25,6 +25,11 @@ header{
 .menu ul li a{
     color: #1B1B1B;
 }
+@media (min-width: 1200px){
+.container {
+    width: 1270px;
+}
+}
 @media only screen and (max-width: 999px){
     .menu{
         position: fixed;
@@ -71,6 +76,7 @@ header{
     .menuClass{
         right:0;
         transition: 0.4s ease-in-out;
+        z-index:1;
     }
     .menuClass ul{
         padding:0px;

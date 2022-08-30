@@ -7,7 +7,6 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { HomeRoutingModule } from './home.routing';
 import { HomeComponent } from './home.component';
-import { HeaderComponent } from 'src/app/header/header.component';
 
 @NgModule({
   declarations: [
