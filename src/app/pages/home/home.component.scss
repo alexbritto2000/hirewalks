@@ -1,0 +1,139 @@
+.jobs-card{
+    /* bg */
+    position: absolute;
+    height: 991px;
+    left: 314px;
+    top: 45px;
+    /* white */
+    background: #FFFFFF;
+    /* shadow-base */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+.avatar{
+    position: absolute;
+    width: 39.62px;
+    height: 30.2px;
+    left: 29.71px;
+    /* margin-top: 54.6px; */
+}
+.com-name{
+    position: absolute;
+    top:4.72px;
+    /* width: 138.66px; */
+    width: 170.66px;
+    left:53.23px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #3F3F46;
+}
+.rating{
+    position: absolute;
+    top: 4.72px;
+    left:230.29px;
+}
+.star{
+    position: absolute;
+    top:6.4px;
+    left:252.29px;
+}
+.review{
+    list-style: none;
+    position: absolute;
+    width: 78px;
+    left:273.29px;
+    top:5.4px;
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+    color: #00B3EC;
+}
+.day{
+    position: absolute;
+    top:7.4px;
+    left: 642px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* or 18px */
+    text-align: right;
+    /* lightBlue/500 */
+    color: #0EA5E9;
+}
+.job-title{
+    position: absolute;
+    top:35.25px;
+    left:50.37px;
+    font-family: 'Poppins',sans-serif;
+    width: 600px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+    color: #18181B;
+}
+.brief-case{
+    top:67.4px;
+    left:38.29px;
+    position: absolute;
+}
+.heart{
+    position: absolute;
+}
+.yrs{
+    top:71.4px;
+    left:66.29px;
+    position: absolute;
+    width: 47px;
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+    color: #A1A1AA;
+}
+.span{
+    left:126.29px
+}
+.pa{
+    top:71.4px;
+    left: 145.29px;
+    position: absolute;
+    width: 160px;
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+    color: #A1A1AA;
+}
+.desc{
+    font-family: 'Helvetica Neue';
+    position: absolute;
+    width: 438.26px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    top: 98.9px;
+    left: 50px;
+    /* or 21px */
+    /* gray/500 */
+    color: #71717A;
+}
+.pagination{
+    position: absolute;
+    top:1035px;
+    left: 482px;
+}

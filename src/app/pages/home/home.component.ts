@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit {
   max_exp:any;
   location:any;
   from:any;
-  ex=['jhh','jhjh','fhfh','djdjhdjhdjhd'];
   length:any;
+  p: number = 1;
 
   constructor(private appservice:Appservice, private http:HttpClient) { }
 

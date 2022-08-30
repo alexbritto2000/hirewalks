@@ -1,12 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from '../app/pages/login/login.component';
-import { HomeComponent } from '../app/pages/home/home.component';
+
+/* path: '',
+component: RecruiterModuleComponent,
+
+children: [
+  {
+    path: 'jobs',
+    loadChildren: () =>
+      import(`./recruiter-job-list/recruiter-job-list.module`).then(
+        (m) => m.RecruiterJobListModule
+      ),
+  }, */
 
 const routes: Routes = [
-  { path:'login', component:LoginComponent },
-  { path:'home', component:HomeComponent },
-  { path:'', component:LoginComponent }
+  { 
+    path:'login', 
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) 
+    //loadChildren: './pages/login/login.module#LoginModule'
+  },
+  { 
+    path:'home', 
+    loadChildren: () =>
+      import(`./pages/home/home.module`).then(
+        (m) => m.HomeModule
+      ),
+  },
+  { path:'', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) }
 ];
 
 @NgModule({

@@ -1,0 +1,87 @@
+header{
+    padding:10px o;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.06); 
+}
+.menu{
+    margin-top: 12px;
+    margin-top: 20px;
+}
+.menu ul li{
+    list-style-type: none;
+    color: #1B1B1B;
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 24px;
+}
+.menu ul li a:hover{
+    cursor: pointer;
+    color: blue;
+    transition: 0.4s ease-in-out;
+}
+.menu ul li a{
+    color: #1B1B1B;
+}
+@media only screen and (max-width: 999px){
+    .menu{
+        position: fixed;
+        right:-280px;
+        top:64px;
+        width:250px;
+        height:100%;
+        background: #FFFFFF;
+    }
+    .menu ul li{
+        display: block;
+        text-align: left;
+        margin:0;
+        padding:10px 0 10px 26px;
+        border-bottom: 1px solid #1B1B1B;
+    }
+    .menu-icon{
+        display: inline-block;
+        position: relative;
+        margin-top: 28px;
+        right: 0;
+        top: 0px;
+    }
+    .menu-icon span{
+        width:32px;
+        height:3px;
+        background:#1B1B1B;
+        display: block;
+        transition: 0.2s ease-in-out;
+    }
+    .menu-icon span:nth-child(2){
+        margin: 4px 0;
+    }
+    .menu_icon_class span:nth-child(2){
+        display: none;
+    }
+    .menu_icon_class span:nth-child(1){
+        transform: rotate(40deg);
+    }
+    .menu_icon_class span:nth-child(3){
+        transform: rotate(-40deg);
+        margin-top: -3px;
+    }
+    .menuClass{
+        right:0;
+        transition: 0.4s ease-in-out;
+    }
+    .menuClass ul{
+        padding:0px;
+    }
+}
+@media only screen and (max-width: 728px){
+    .menu-icon{
+    position: absolute;
+    margin-top: -37px;
+    }
+    .member{
+        margin-right:20px;
+    }
+}
