@@ -4,7 +4,8 @@
         <div class="content" *ngFor="let apiData of api | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
             <div class="avatar" [style.margin-top]="i==0 ? '54.6px':'30.6px'">
                 <div class="first-line">
-                    <img src="{{api[i].vendor.logo}}" style="width:39.62px; height:30.2px;">
+                    <img *ngIf="api[i].vendor.logo" src="{{api[i].vendor.logo}}" style="width:39.62px; height:30.2px;">
+                    <img *ngIf="!api[i].vendor.logo" src="../../../assets/images/Avatar.png" style="width:39.62px; height:30.2px;">
                     <p class="com-name">{{api[i].vendor.company_name}}<h5 class="rating">{{api[i].vendor.rate}}</h5>
                     <img class="star" src="../../../assets/images/020---Star.png">
                     <li class="review">
@@ -23,8 +24,8 @@
                     </div>
                     <p class="yrs">{{api[i].min_exp}}-{{api[i].max_exp}} Yrs</p>
                     <p class="yrs">|</p>
-                    <p class="pa" *ngIf="'{{api[i].salary_pay.yearly_from}}'"><b>AED</b>&nbsp;{{api[i].salary_pay.yearly_from}}-{{api[i].salary_pay.yearly_to}} P.A</p>
-                    <p class="yrs">|</p>
+                    <p class="pa" *ngIf="api[i].salary_pay.yearly_from"><b>AED</b>&nbsp;{{api[i].salary_pay.yearly_from}}-{{api[i].salary_pay.yearly_to}} P.A</p>
+                    <p class="yrs" *ngIf="api[i].salary_pay.yearly_from">|</p>
                 
                     <div class="brief-case" style="margin-left: 1px;margin-top: -3px;">
                         <img src="../../../assets/images/Vector (2).png">
@@ -35,7 +36,7 @@
                     <img src="../../../assets/images/Vector (3).png">
                 </div>
                 <div class="fourth-line">
-                    <p class="desc">Marketplace apps similar to olx or bigl but for EU market</p>
+                    <p class="desc">{{api[i].vendor.company_profile}}Marketplace apps similar to olx or bigl but for EU market</p>
                 </div>
             </div>
     

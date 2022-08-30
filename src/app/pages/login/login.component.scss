@@ -157,9 +157,16 @@ span[data-color="bone"] {
   .head-align{
     margin-left: 70px;
   }
-  @media only screen and (max-width: 538px){
+  @media only screen and (max-width: 575px){
+    .member{
+      flex-wrap: wrap;
+    }
     .member a{
       margin-right: 0px !important;
+      width: 50%;
+    }
+    .member p{
+      width: 50%;
     }
   }
 }
